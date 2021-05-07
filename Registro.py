@@ -3,12 +3,13 @@ from tkinter import font, ttk
 from main_frame import MainFrame
 from data_frame import DataFrame
 
+
 class Registro(tk.Tk):
     def __init__(self):
         super().__init__()
 
-        self.winfo_toplevel().title("Registro")
-        self.resizable(0,0)
+        self.winfo_toplevel().title("Registro Torneo")
+        self.resizable(0, 0)
 
         self.dataFrame = DataFrame(self, lambda: self.showFrame('register'))
         self.dataFrame.grid(row=0, column=0, sticky='NSEW')
@@ -24,7 +25,6 @@ class Registro(tk.Tk):
         toShow = self.frames[frame]
         toShow.tkraise()
 
-        
 
 app = Registro()
 app.mainloop()
